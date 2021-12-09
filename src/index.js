@@ -31,7 +31,13 @@ app.post("/repositories", (request, response) => {
 app.put("/repositories/:id", (request, response) => {
   // Enable to update only title, url and techs properties
   const { id } = request.params
-  const updatedRepository = request.body
+  const { title, url, techs } = request.body
+  
+  const updatedRepository = {
+    title,
+    url,
+    techs
+  }
 
   const repositoryIndex = repositories.findIndex(repository => repository.id === id)
 
@@ -40,10 +46,11 @@ app.put("/repositories/:id", (request, response) => {
   }
 
   // Should not be able to update likes manually
-  const repository = { ...repositories[repositoryIndex], ...updatedRepository, likes: 0 }
-
-  repositories[repositoryIndex] = repository
-
+  const repository = { 
+    ...repositories[repositoryIndex], 
+    ...updatedRepository, 
+    likes: 0 }
+    
   return response.json(repository)
 })
 
