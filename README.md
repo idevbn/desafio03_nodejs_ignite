@@ -52,8 +52,7 @@ The project includes the following technologies:
 
 1. Prequisites:
 
-To run this app on your machine is necessary to have locally installed: **[Node.js](https://nodejs.org/en/)**,  **[Git](https://git-scm.com/)** and a package manager such as **[Yarn](https://yarnpkg.com/)**.
- 
+To run this app on your machine is necessary to have locally installed: **[Node.js](https://nodejs.org/en/)**, **[Git](https://git-scm.com/)** and a package manager such as **[Yarn](https://yarnpkg.com/)**.
 
 2. Cloning this repository:
 
@@ -65,7 +64,7 @@ To run this app on your machine is necessary to have locally installed: **[Node.
 
 ```sh
   # Installing packages and dependencies
-  $ yarn  
+  $ yarn
 
   # Initializing the server
   $ yarn dev
@@ -73,6 +72,6 @@ To run this app on your machine is necessary to have locally installed: **[Node.
   # Testing
   $ yarn test
 
-  # Open your browser at the https://localhost:3333
+  # Open your browser at the localhost:3333
 
 ```
